@@ -276,13 +276,6 @@
     <!--Footer-->
     <?php 
     include 'footer.php';
-    
-    }
-    else
-    {
-        header("location:index.php");
-    }
-    
     ?>
 
 
