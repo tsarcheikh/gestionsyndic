@@ -1,3 +1,7 @@
+<?php
+    @ini_set('display_errors', 'on');
+?>
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
