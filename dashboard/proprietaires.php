@@ -1,10 +1,3 @@
-<?php
-    session_start() ;
-    
-    if(isset($_SESSION['email'])) {
-      
-?>
-
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
