@@ -32,21 +32,8 @@
 							</div>
 							<p>Veuillez entrer vos informations</p>
 							<!-- Message d'erreur si les champs sont vides -->
-							<?php
-								if(@$_GET['Empty']==true)  {
-							?>
-							<div style="color:red; margin-bottom:10px; margin-top:-15px; text-align:center;"><?php echo $_GET['Empty'];?></div>
-							<?php 
-							} 
-							?>
-							<!-- Message d'erreur si les informations sont incorrectes -->
-							<?php
-								if(@$_GET['Invalid']==true)  {
-							?>
-							<div style="color:red; margin-bottom:10px; margin-top:-15px; text-align:center;"><?php echo $_GET['Invalid'];?></div>
-							<?php 
-							} 
-							?>
+							
+							
 							<div class="form-row">
 								<div class="form-holder w-100">
 									<input type="email" placeholder="Email" class="form-control" name="email"  >
