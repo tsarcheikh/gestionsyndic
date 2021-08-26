@@ -1,17 +1,17 @@
-Product Name
+Application Name
 ---------------
-Vuexy HTML Admin Template
+GestionSyndic
 
 
-Product Description
+Application Description
 -------------------
-Vuexy admin is super flexible, powerful, clean & modern responsive bootstrap admin template with unlimited possibilities. It includes 4 pre-built templates with organized folder structure, clean & commented code, 100+ pages, 70+ components, 50+ charts, 50+ advance cards (widgets) and many more.
+GestionSyndic est une plateform de gestion de syndicats. Elle vous permet de créer et gérer des lots et propriètaires, de fixer des charges, et de faire des appels de fonds. 
+Vous pouvez aussi générer vos relevés de comptes, attestaions, etc...
 
 
-Online Documentation
+Documentation en ligne
 --------------------
-You will find documentation in your downloaded zip file from ThemeForest. You can access documentation online as well.
-Documentation URL: https://pixinvent.com/demo/vuexy-html-bootstrap-admin-template/documentation
+Vous pouvez trouver la documentation en nous contactant sur contact@gestionsyndic.com
 
 Change Log
 ----------
