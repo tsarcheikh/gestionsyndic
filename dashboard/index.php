@@ -1,7 +1,7 @@
 <?php
-    session_start() ;
+    //session_start() ;
     
-    if(isset($_SESSION['email'])) {
+    //if(isset($_SESSION['email'])) {
       
 ?>
 
@@ -148,11 +148,11 @@
     <!-- Footer-->
     <?php
     include 'footer.php';
-    }
-    else
-    {
-        header("location:index.php");
-    }
+    //}
+   // else
+    //{
+     //   header("location:index.php");
+    //}
     
     ?>
 

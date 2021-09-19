@@ -91,15 +91,15 @@ img {
     content: "";
     width: 0;
     height: 2px;
-    background: #2c5bbc;
+    background: #00a1b5;
     position: absolute;
     left: -68px;
     top: 5px;
     transition: all 0.6s ease; }
 .wizard > .steps li.first a {
-  background: #2c5bbc; }
+  background: #00a1b5; }
 .wizard > .steps li.checked a {
-  background: #2c5bbc; }
+  background: #00a1b5; }
   .wizard > .steps li.checked a:after {
     width: 58px; }
 .wizard > .steps li:last-child a {
@@ -138,7 +138,7 @@ img {
 h3 {
   font-family: "Muli-SemiBold";
   font-size: 22px;
-  color: #2c5bbc;
+  color: #00a1b5;
   text-transform: uppercase;
   letter-spacing: 7px;
   padding: 5px 15px;
@@ -149,7 +149,7 @@ h3 {
 p {
   font-family: "Muli-SemiBold";
   font-size: 20px;
-  color: #2c5bbc;
+  color: #00a1b5;
   text-align: center;
   margin-bottom: 26px; }
 
@@ -272,7 +272,7 @@ select.form-control {
     margin-left: 20px; }
   .actions li:last-child a {
     width: 124px;
-    background: #2c5bbc;
+    background: #00a1b5;
     color: #fff; }
     .actions li:last-child a:hover {
       background: #3e68bd; }
@@ -287,7 +287,7 @@ select.form-control {
     opacity: 0;
     transition: all 1s; }
   .actions li[aria-disabled="false"] ~ li a {
-    background: #2c5bbc;
+    background: #00a1b5;
     color: #fff; }
     .actions li[aria-disabled="false"] ~ li a:hover {
       background: #3a62b1; }
@@ -302,11 +302,11 @@ select.form-control {
   padding:12px;
   border:none;
   border-radius: 5px;
-  background: #2c5bbc;
+  background: #00a1b5;
   color: #fff;
   font-weight: bold; }
 .btn-submit:hover {
-  background: #3e68bd; }
+  background: #00a0b5c9; }
 
 .label-account{
   margin-top: 5%;
@@ -378,12 +378,12 @@ select.form-control {
     margin-top: 24px; }
   .checkbox-circle label {
     cursor: pointer;
-    color: #2c5bbc;
+    color: #00a1b5;
     font-size: 13px;
     line-height: 1.9;
     transform: translateY(-5px); }
     .checkbox-circle label a {
-      color: #2c5bbc; }
+      color: #00a1b5; }
       .checkbox-circle label a:hover {
         color: #3e68bd; }
   .checkbox-circle input {
@@ -399,7 +399,7 @@ select.form-control {
     height: 13px;
     width: 13px;
     border-radius: 50%;
-    border: 1px solid #2c5bbc; }
+    border: 1px solid #00a1b5; }
     .checkbox-circle .checkmark:after {
       content: "";
       top: 2px;
@@ -407,7 +407,7 @@ select.form-control {
       width: 7px;
       height: 7px;
       border-radius: 50%;
-      background: #2c5bbc;
+      background: #00a1b5;
       position: absolute;
       display: none; }
 
