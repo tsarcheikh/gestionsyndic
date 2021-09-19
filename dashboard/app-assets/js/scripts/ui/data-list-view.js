@@ -16,7 +16,7 @@ $(document).ready(function() {
       {
         orderable: true,
         targets: 0,
-        checkboxes: { selectRow: true }
+        // checkboxes: { selectRow: true }
       }
     ],
     dom:
@@ -34,15 +34,15 @@ $(document).ready(function() {
     pageLength: 4,
     buttons: [
       {
-        text: "<i class='feather icon-plus'></i> Add New",
-        action: function() {
-          $(this).removeClass("btn-secondary")
-          $(".add-new-data").addClass("show")
-          $(".overlay-bg").addClass("show")
-          $("#data-name, #data-price").val("")
-          $("#data-category, #data-status").prop("selectedIndex", 0)
-        },
-        className: "btn-outline-primary"
+        // text: "<i class='feather icon-plus'></i> Ajouter nouveau",
+        // action: function() {
+        //   $(this).removeClass("btn-secondary")
+        //   $(".add-new-data").addClass("show")
+        //   $(".overlay-bg").addClass("show")
+        //   $("#data-name, #data-price").val("")
+        //   $("#data-category, #data-status").prop("selectedIndex", 0)
+        // },
+        // className: "btn-outline-primary"
       }
     ],
     initComplete: function(settings, json) {

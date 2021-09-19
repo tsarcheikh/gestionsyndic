@@ -1,3 +1,10 @@
+<?php
+    session_start() ;
+    
+    if(isset($_SESSION['email'])) {
+      
+?>
+
 <!DOCTYPE html>
 <html class="loading" lang="en" data-textdirection="ltr">
 <!-- BEGIN: Head-->
@@ -30,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="app-assets/css/themes/semi-dark-layout.css">
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="app-assets/css/core/menu/menu-types/horizontal-menu.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/core/colors/palette-gradient.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/plugins/file-uploaders/dropzone.css">
     <link rel="stylesheet" type="text/css" href="app-assets/css/pages/data-list-view.css">
@@ -45,7 +52,7 @@
 
 <!-- BEGIN: Body-->
 
-<body class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+<body class="horizontal-layout horizontal-menu 2-columns  navbar-floating footer-static " data-open="hover" data-menu="horizontal-menu" data-col="2-columns">
 
     <!--Header-->
     <?php include 'header.php';?>
@@ -67,7 +74,7 @@
                             <div class="breadcrumb-wrapper col-12">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php">Tableau de bord</a></li>
-                                    <li class="breadcrumb-item"><a href="#">Copropriété</a></li>
+                                    <li class="breadcrumb-item"><a href="#">Lots</a></li>
                                     <li class="breadcrumb-item active">Liste des lots</li>
                                 </ol>
                             </div>
@@ -77,8 +84,7 @@
                 <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
                     <div class="form-group breadcrum-right">
                         <div class="dropdown">
-                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="feather icon-settings"></i></button>
-                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Chat</a><a class="dropdown-item" href="#">Email</a><a class="dropdown-item" href="#">Calendrier</a></div>
+                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="feather icon-download"></i></button>
                         </div>
                     </div>
                 </div>
@@ -86,18 +92,13 @@
             <div class="content-body">
                 <!-- Data list view starts -->
                 <section id="data-list-view" class="data-list-view-header">
-                    <div class="action-btns d-none">
+                    <div class="action-btns">
                         <div class="btn-dropdown mr-1 mb-1">
                             <div class="btn-group dropdown actions-dropodown">
-                                <button type="button" class="btn btn-white px-1 py-1 dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Actions
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#AddForm">
+                                    <span><i class="feather icon-plus"></i></span>Ajouter lot
                                 </button>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#"><i class="feather icon-trash"></i>Supprimer</a>
-                                    <a class="dropdown-item" href="#"><i class="feather icon-archive"></i>Archive</a>
-                                    <a class="dropdown-item" href="#"><i class="feather icon-file"></i>Imprimer</a>
-                                    <!-- <a class="dropdown-item" href="#"><i class="feather icon-save"></i>Another Action</a> -->
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -125,7 +126,7 @@
                                     <td></td>
                                     <td class="product-name">Lot N°1</td>
                                     <td class="product-category">Thioro DIOP</td>
-                                    <td class="product-price"> <small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 300 €</td>
+                                    <td class="product-price"> <small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 300 </td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
@@ -133,72 +134,72 @@
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-action">
-                                        <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                        <span class="action-delete"><i class="feather icon-trash"></i></span>
+                                        <a href="#?edit=<?php echo $donnee["id"]; ?>"><span class="action-edit"><i class="feather icon-edit"></i></span></a>
+                                        <a href="#?edit=<?php echo $donnee["id"]; ?>"><span class="action-delete"><i class="feather icon-trash"></i></span></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td class="product-name">Lot N°2</td>
                                     <td class="product-category">Modou SENE</td>
-                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 200 €</td>
-                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 250 €</td>
+                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 200 </td>
+                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 250 </td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-action">
-                                        <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                        <span class="action-delete"><i class="feather icon-trash"></i></span>
+                                        <a href="#?edit=<?php echo $donnee["id"]; ?>"><span class="action-edit"><i class="feather icon-edit"></i></span></a>
+                                        <a href="#?edit=<?php echo $donnee["id"]; ?>"><span class="action-delete"><i class="feather icon-trash"></i></span></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td class="product-name">Lot N°3</td>
                                     <td class="product-category">Cheikh SARR</td>
-                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 100 €</td>
-                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 250 €</td>
+                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 100 </td>
+                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 250 </td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-action">
-                                        <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                        <span class="action-delete"><i class="feather icon-trash"></i></span>
+                                        <a href="#?edit=<?php echo $donnee["id"]; ?>"><span class="action-edit"><i class="feather icon-edit"></i></span></a>
+                                        <a href="#?edit=<?php echo $donnee["id"]; ?>"><span class="action-delete"><i class="feather icon-trash"></i></span></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td class="product-name">Lot N°4</td>
                                     <td class="product-category">John Doe</td>
-                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 200 €</td>
-                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 250 €</td>
+                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 200 </td>
+                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 250 </td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-action">
-                                        <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                        <span class="action-delete"><i class="feather icon-trash"></i></span>
+                                        <a href="#?edit=<?php echo $donnee["id"]; ?>"><span class="action-edit"><i class="feather icon-edit"></i></span></a>
+                                        <a href="#?edit=<?php echo $donnee["id"]; ?>"><span class="action-delete"><i class="feather icon-trash"></i></span></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td class="product-name">Lot N°5</td>
                                     <td class="product-category">Maram KARE</td>
-                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 200 €</td>
-                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 250 €</td>
+                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 200 </td>
+                                    <td class="product-price"><small class="badge badge-pill badge-secondary">Tantièmes</small> <br> 250 </td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-price">0 €</td>
                                     <td class="product-action">
-                                        <span class="action-edit"><i class="feather icon-edit"></i></span>
-                                        <span class="action-delete"><i class="feather icon-trash"></i></span>
+                                        <a href="#?edit=<?php echo $donnee["id"]; ?>"><span class="action-edit"><i class="feather icon-edit"></i></span></a>
+                                        <a href="#?edit=<?php echo $donnee["id"]; ?>"><span class="action-delete"><i class="feather icon-trash"></i></span></a>
                                     </td>
                                 </tr>
                                 
@@ -207,13 +208,197 @@
                     </div>
                     <!-- DataTable ends -->
 
+                    <!-- Add Modal -->
+                    <div class="modal fade text-left" id="AddForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" id="myModalLabel33">Ajouter lot </h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+
+                                <!-- Messages d'erreur -->
+                                <div>
+                                    <!-- Message d'erreur si les champs sont vides -->
+                                    <?php
+                                        if(@$_GET['Empty']==true)  {
+                                    ?>
+                                    <div style="color:red; margin-bottom:10px; margin-top:-15px; text-align:center;"><?php echo $_GET['Empty'];?></div>
+                                    <?php 
+                                    } 
+                                    ?>
+
+                                    <!-- Message d'erreur si les informations sont incorrectes -->
+                                    <?php
+                                        if(@$_GET['Invalid']==true)  {
+                                    ?>
+                                    <div style="color:red; margin-bottom:10px; margin-top:-15px; text-align:center;"><?php echo $_GET['Invalid'];?></div>
+                                    <?php 
+                                    } 
+                                    ?>
+                                </div>
+
+                                <form action="save_charge.php" method="post">
+                                    <div class="modal-body my-2">
+                                        <label>Nom charge: </label>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Saisir nom lot" name="nom" required>
+                                        </div>
+
+                                        <label>Description: </label>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Saisir description" name="description" required>
+                                        </div>
+
+                                        <label>Copropriétaire</label>
+                                        <select class="form-group form-control" id="data-category" name="type">
+                                            <option value="Thioro Diop">Thioro DIOP</option>
+                                            <option value="Modou SENE ">Modou SENE</option>
+                                            <option value="Modou SENE ">Cheikh SARR</option>
+                                        </select>
+
+                                        <!-- Charges Générales -->
+                                        <div class="col-sm-12 mb-1">
+                                            <label>Charges Générales</label>
+                                            <div class="row">
+                                                <select class="form-control col-sm-7" id="data-status">
+                                                    <option>Tantièmes</option>
+                                                    <option>Prorota</option>
+                                                </select>
+                                                <div class="col-sm-5 input-group">
+                                                    <input type="number" class="form-control" aria-label="Montant (en euros)">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">€</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Charges Escalier -->
+                                        <div class="col-sm-12 mb-1">
+                                            <label>Charges Escalier</label>
+                                            <div class="row">
+                                                <select class="form-control col-sm-7" id="data-status">
+                                                    <option>Tantièmes</option>
+                                                    <option>Prorota</option>
+                                                </select>
+                                                <div class="col-sm-5 input-group">
+                                                    <input type="number" class="form-control" aria-label="Montant (en euros)">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">€</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Charges Eau -->
+                                        <div class="col-sm-12 mb-1">
+                                            <label>Charges Eau</label>
+                                            <div class="row">
+                                                <select class="form-control col-sm-7" id="data-status">
+                                                    <option>Tantièmes</option>
+                                                    <option>Prorota</option>
+                                                </select>
+                                                <div class="col-sm-5 input-group">
+                                                    <input type="number" class="form-control" aria-label="Montant (en euros)">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">€</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Charge 1 -->
+                                        <div class="col-sm-12 mb-1">
+                                            <label>Charge 1</label>
+                                            <div class="row">
+                                                <select class="form-control col-sm-7" id="data-status">
+                                                    <option>Tantièmes</option>
+                                                    <option>Prorota</option>
+                                                </select>
+                                                <div class="col-sm-5 input-group">
+                                                    <input type="number" class="form-control" aria-label="Montant (en euros)">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">€</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Charge 2 -->
+                                        <div class="col-sm-12 mb-1">
+                                            <label>Charge 2</label>
+                                            <div class="row">
+                                                <select class="form-control col-sm-7" id="data-status">
+                                                    <option>Tantièmes</option>
+                                                    <option>Prorota</option>
+                                                </select>
+                                                <div class="col-sm-5 input-group">
+                                                    <input type="number" class="form-control" aria-label="Montant (en euros)">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">€</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Travaux -->
+                                        <div class="col-sm-12 mb-1">
+                                            <label>Travaux</label>
+                                            <div class="row">
+                                                <select class="form-control col-sm-7" id="data-status">
+                                                    <option>Tantièmes</option>
+                                                    <option>Prorota</option>
+                                                </select>
+                                                <div class="col-sm-5 input-group">
+                                                    <input type="number" class="form-control" aria-label="Montant (en euros)">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">€</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Provision -->
+                                        <div class="col-sm-12 mb-1">
+                                            <label>Provision</label>
+                                            <div class="row">
+                                                <select class="form-control col-sm-7" id="data-status">
+                                                    <option>Tantièmes</option>
+                                                    <option>Prorota</option>
+                                                </select>
+                                                <div class="col-sm-5 input-group">
+                                                    <input type="number" class="form-control" aria-label="Montant (en euros)">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text">€</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="add-data-btn">
+                                            <input type="submit" class="btn btn-primary" name="valider" value="Enregister" />
+                                        </div>
+                                        <div class="cancel-data-btn">
+                                            <input type="reset" class="btn btn-outline-danger" value="Annuler" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- add new sidebar starts -->
                     <div class="add-new-data-sidebar">
                         <div class="overlay-bg"></div>
                         <div class="add-new-data">
                             <div class="div mt-2 px-2 d-flex new-data-title justify-content-between">
                                 <div>
-                                    <h4 class="text-uppercase">Ajout copropriété</h4>
+                                    <h4 class="text-uppercase">Modifier lot</h4>
                                 </div>
                                 <div class="hide-data-sidebar">
                                     <i class="feather icon-x"></i>
@@ -231,7 +416,7 @@
                                             <input type="text" class="form-control" id="data-name">
                                         </div>
                                         <div class="col-sm-12 data-field-col">
-                                            <label for="data-category"> Propriétaire </label>
+                                            <label for="data-category"> Copropriétaire </label>
                                             <select class="form-control" id="data-category">
                                                 <option>Thioro DIOP</option>
                                                 <option>Modou SENE</option>
@@ -380,6 +565,12 @@
     <!--Footer-->
     <?php 
     include 'footer.php';
+    
+    }
+    else
+    {
+        header("location:index.php");
+    }
     
     ?>
 

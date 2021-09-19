@@ -1,49 +1,77 @@
-<!-- BEGIN: Main Menu-->
-<div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
-<div class="navbar-header">
-            <ul class="nav navbar-nav flex-row">
-                <li class="nav-item mr-auto"><a class="navbar-brand" href="index.php">
-                        <!-- <div class="brand-logo"></div> -->
-                        <h2 class="brand-text mb-0">GestionSyndic</h2>
-                    </a></li>
-                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li>
-            </ul>
-        </div>
-        <div class="shadow-bottom"></div>
-        <div class="main-menu-content">
-            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class=" nav-item"><a href="index.php"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Tableau de bord">Tableau de Bord</span></a></li>
-                
-                <li class=" navigation-header"><span>Gérer</span></li>
-                <li class=" nav-item"><a href="copropriete.php"><i class="feather icon-folder"></i><span class="menu-title" data-i18n="Copropriété">Copropriété</span></a>
-                    <ul class="menu-content">
-                        <li><a href="copropriete.php"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Lots">Lots</span></a></li>
-                        <li><a href="proprietaires.php"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Propriétaires">Propriétaires</span></a></li>
-                        <li><a href="#"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Charges">Charges</span></a></li>
-                    </ul>
-                </li>
-                <li class=" nav-item"><a href="#"><i class="feather icon-percent"></i><span class="menu-title" data-i18n="Prévisionnel">Prévisionnel</span></a></li>
-                <li class=" nav-item"><a href="#"><i class="feather icon-book"></i><span class="menu-title" data-i18n="Livre de compte">Livre de compte</span></a></li>
-                <li class=" nav-item"><a href="#"><i class="feather icon-package"></i><span class="menu-title" data-i18n="Compte de lots">Compte de lots</span></a></li>
-                <li class=" nav-item"><a href="#"><i class="feather icon-trending-up"></i><span class="menu-title" data-i18n="Appels de fonds">Appels de fonds</span></a></li>
-                <li class=" nav-item"><a href="#"><i class="feather icon-paperclip"></i><span class="menu-title" data-i18n="Charges spéciales">Charges spéciales</span></a></li>
-                
-                <li class=" navigation-header"><span>Voir</span></li>
-                <li class=" nav-item"><a href="#"><i class="feather icon-file-text"></i><span class="menu-title" data-i18n="Relevés de compte">Relevés de compte</span></a></li>
-                <li class=" nav-item"><a href="#"><i class="feather icon-file-text"></i><span class="menu-title" data-i18n="Annexe comptable">Annexe comptable</span></a></li>
-                <li class=" nav-item"><a href="#"><i class="feather icon-file"></i><span class="menu-title" data-i18n="Attestation">Attestation</span></a></li>
-                <li class=" nav-item"><a href="colors.html"><i class="feather icon-layers"></i><span class="menu-title" data-i18n="Délibération">Délibération</span></a></li>
-                
-                <li class=" navigation-header"><span>Réglages</span></li>
-                <li class=" nav-item"><a href="page-knowledge-base.html"><i class="feather icon-file-text"></i><span class="menu-title" data-i18n="Feuille de calcul">Feuille de calcul</span></a></li>
-                <li class=" nav-item"><a href="page-user-profile.html"><i class="feather icon-user"></i><span class="menu-title" data-i18n="Profil">Profil</span></a></li>
-                <li class=" nav-item"><a href="page-account-settings.html"><i class="feather icon-settings"></i><span class="menu-title" data-i18n="Paramétres">Paramétres</span></a></li>
-                
-                <li class=" navigation-header"><span>Support</span>
-                </li>
-                <li class=" nav-item"><a href="#"><i class="feather icon-info"></i><span class="menu-title" data-i18n="Notice">Notice</span></a></li>
-                <li class=" nav-item"><a href="page-faq.html"><i class="feather icon-help-circle"></i><span class="menu-title" data-i18n="FAQ">FAQ</span></a></li>
-            </ul>
+<!--Main menu-->
+<div class="horizontal-menu-wrapper">
+        <div class="header-navbar navbar-expand-sm navbar navbar-horizontal floating-nav navbar-light navbar-without-dd-arrow navbar-shadow menu-border" role="navigation" data-menu="menu-wrapper">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item mr-auto"><a class="navbar-brand" href="index.php">
+                            <div class="brand-logo"></div>
+                            <h2 class="brand-text mb-0">GestionSyndic</h2>
+                        </a></li>
+                    <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li>
+                </ul>
+            </div>
+            <!-- Horizontal menu content-->
+            <div class="navbar-container main-menu-content" data-menu="menu-container">
+                <!-- include includes/mixins-->
+                <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
+                    <li class="dropdown nav-item active" data-menu=""><a class="dropdown-item" href="index.php"><i class="feather icon-home"></i><span data-i18n="Tableau de bord">Tableau de bord</span></a></li>
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"><i class="feather icon-server"></i><span data-i18n="Copropriété">Banque</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="copropriete.php" data-toggle="dropdown" data-i18n="Liste de lots"><i class="feather icon-eye"></i>Liste des lots</a>
+                            </li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle="dropdown" data-i18n="Nouveau lot"><i class="feather icon-plus"></i>Nouveau lot</a>
+                            </li>
+                            <li class="dropdown dropdown-submenu" data-menu="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown" data-i18n="Compte"><i class="feather icon-list"></i>Compte</a>
+                                <ul class="dropdown-menu">
+                                    <li data-menu=""><a class="dropdown-item" href="#" data-toggle="dropdown" data-i18n="Select"><i class="feather icon-circle"></i>Compte de lots</a>
+                                    </li>
+                                    <li data-menu=""><a class="dropdown-item" href="#" data-toggle="dropdown" data-i18n="Switch"><i class="feather icon-circle"></i>Relevés de compte</a>
+                                    </li>
+                                    <li data-menu=""><a class="dropdown-item" href="#" data-toggle="dropdown" data-i18n="Checkbox"><i class="feather icon-circle"></i>Annexe comptable</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"><i class="feather icon-users"></i><span data-i18n="Copropriétaires">Copropriétaires</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="proprietaires.php" data-toggle="dropdown" data-i18n="Liste copropriétaires"><i class="feather icon-eye"></i>Liste des copropriétaires</a>
+                            </li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle="dropdown" data-i18n="Nouveau copropriétaire"><i class="feather icon-user-plus"></i>Nouveau copropriétaire</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"><i class="feather icon-layers"></i><span data-i18n="Copropriétaires">Charges</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="charges.php" data-toggle="dropdown" data-i18n="Liste des charges"><i class="feather icon-eye"></i>Liste des charges</a>
+                            </li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle="dropdown" data-i18n="Frais spéciaux"><i class="feather icon-paperclip"></i>Frais spéciaux</a>
+                            </li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle="dropdown" data-i18n="Nouvelle charge"><i class="feather icon-file-plus"></i>Nouvelle charge</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"><i class="feather icon-bar-chart-2"></i><span data-i18n="Budget">Budget</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="copropriete.php" data-toggle="dropdown" data-i18n="Appels de fonds"><i class="feather icon-trending-up"></i>Appels de fonds</a>
+                            </li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle="dropdown" data-i18n="Prévisionnel"><i class="feather icon-percent"></i>Prévisionnel</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown nav-item" data-menu="dropdown"><a class="dropdown-toggle nav-link" href="#" data-toggle="dropdown"><i class="feather icon-more-horizontal"></i><span data-i18n="Others">Autres</span></a>
+                        <ul class="dropdown-menu">
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle="dropdown" data-i18n="Attestation"><i class="feather icon-file"></i>Attestation</a>
+                            </li>
+                            <li data-menu=""><a class="dropdown-item" href="#" data-toggle="dropdown" data-i18n="Délibération"><i class="feather icon-folder"></i>Délibération</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- END: Main Menu-->
